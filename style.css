@@ -187,7 +187,7 @@ video {
 a,
 button,
 .btn {
-    font-size: var(--size-base);
+    font-size: var(--text-size);
     font-weight: var(--fw-medium);
     line-height: normal;
     color: inherit;
