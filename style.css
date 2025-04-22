@@ -41,6 +41,7 @@
     --size-6-base: 3.75rem;
     --size-7-base: 4.375rem;
     --size-8-base: 5rem;
+    --text-size: 1.125rem;
 
     /*Clamp*/
     --clamp-x-small: clamp(0.188rem, 1vw, 0.313rem);
@@ -59,7 +60,6 @@
     --clamp-5-base: clamp(2.25rem, 5vw, 3.125rem);
     --clamp-7-base: clamp(3.125rem, 7vw, 4.375rem);
     --clamp-7-xl: clamp(3.5rem, 7.2vw, 4.5rem);
-    --clamp-text: clamp(0.938rem, 2vw, 1.125rem);
 
     /*Font Weight*/
     --fw-thin: 100;
@@ -157,14 +157,14 @@ p,
 .p,
 figcaption,
 address {
-    font-size: var(--clamp-text);
+    font-size: var(--text-size);
     font-weight: var(--fw-regular);
     font-style: normal;
 }
 
 b,
 strong {
-    font-size: var(--clamp-text);
+    font-size: var(--text-size);
     font-weight: var(--fw-medium);
 }
 
@@ -187,7 +187,7 @@ video {
 a,
 button,
 .btn {
-    font-size: var(--clamp-base);
+    font-size: var(--size-base);
     font-weight: var(--fw-medium);
     line-height: normal;
     color: inherit;
@@ -249,12 +249,12 @@ button,
 }
 
 .form-group label {
-    font-size: var(--clamp-base);
+    font-size: var(--size-base);
 }
 
 .form-group input,
 textarea {
-    font-size: var(--clamp-text);
+    font-size: var(--text-size);
     color: inherit;
     background-color: transparent;
     border: none;
