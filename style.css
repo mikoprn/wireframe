@@ -81,7 +81,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    line-height: 1.5;
+    line-height: 1.6;
     font-family: 'general-sans', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
         'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
@@ -146,19 +146,12 @@ h4,
     line-height: 1.2;
 }
 
-h5,
-.h5 {
-    font-size: var(--clamp-1-xl);
-    font-weight: var(--fw-regular);
-    line-height: 1.2;
-}
-
 p,
 .p,
 figcaption,
 address {
     font-size: var(--text-size);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-light);
     font-style: normal;
 }
 
@@ -170,7 +163,8 @@ strong {
 
 small,
 .text-small {
-    font-size: var(--clamp-base-sm);
+    font-size: var(--size-base);
+    font-weight: var(--fw-light);
 }
 
 img,
@@ -188,7 +182,7 @@ a,
 button,
 .btn {
     font-size: var(--text-size);
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-regular);
     line-height: normal;
     color: inherit;
     transition: var(--transition);
@@ -205,6 +199,7 @@ button:focus-visible,
 
 button,
 .btn {
+    font-size: var(--size-base);
     width: fit-content;
     color: var(--dark-base);
     background-color: var(--gray-200);
@@ -250,11 +245,13 @@ button,
 
 .form-group label {
     font-size: var(--size-base);
+    font-weight: var(--fw-light);
 }
 
 .form-group input,
 textarea {
     font-size: var(--text-size);
+    font-weight: var(--fw-light);
     color: inherit;
     background-color: transparent;
     border: none;
@@ -443,8 +440,7 @@ textarea:focus-visible:invalid {
 }
 
 .nav__link {
-    font-size: var(--clamp-1-xl);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-light);
     transition: var(--transition);
 }
 
@@ -485,14 +481,18 @@ main,
 }
 
 .contact__link {
-    font-size: var(--clamp-text);
-    font-weight: var(--fw-regular);
+    font-size: var(--text-size);
+    font-weight: var(--fw-light);
 }
 
 /* Footer Section */
 .footer {
     padding-block: 1em;
     border-top: var(--border);
+}
+
+.footer p {
+    font-size: var(--clamp-1-xl);
 }
 
 /* Tablet 700px  */
@@ -533,7 +533,8 @@ main,
 
     .nav__link {
         display: block;
-        font-weight: var(--fw-semiBold);
+        font-size: var(--text-size);
+        font-weight: var(--fw-medium);
         color: var(--light-base);
         padding-block: 1em;
         text-align: center;
@@ -572,6 +573,6 @@ main,
 
     .contact__form {
         padding-inline: 1em;
-       
+
     }
 }
