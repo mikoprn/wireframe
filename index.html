@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="favicon.webp" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -11,15 +11,37 @@
     <meta name="keywords" content="Wireframe template html css js" />
     <meta name="author" content="Miko" />
     <title>Wireframe</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yoursite.com" />
+    <meta property="og:title" content="Wireframe" />
+    <meta
+      property="og:description"
+      content="Hai, hello there! Hope you been well and healty :D"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yoursite.com" />
+    <meta property="twitter:title" content="Wireframe" />
+    <meta
+      property="twitter:description"
+      content="Hai, hello there! Hope you been well and healty :D"
+    />
+    <meta name="robots" content="index, follow" />
+    <!-- Fonts -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=montserrat@100,200,300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header id="header" class="header">
       <nav class="wrapper-contents nav">
-        <a href="/" class="nav__logo" title="Back to Home">Wireframe</a>
+        <a href="/" class="logo" title="Back to Home">Wireframe</a>
         <menu class="nav__menu">
-          <li><a href="#homeSection" class="nav__link">Home</a></li>
-          <li><a href="#section1" class="nav__link">Section-1</a></li>
+          <li><a href="#section1" class="nav__link">Home</a></li>
           <li><a href="#section2" class="nav__link">Section-2</a></li>
           <li><a href="#section3" class="nav__link">Section-3</a></li>
           <li><a href="#section4" class="nav__link">Section-4</a></li>
@@ -28,38 +50,56 @@
         <div id="themeSwitch">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="26px"
-            width="26px"
-            viewBox="0 -960 960 960"
+            aria-hidden="true"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
             fill="currentColor"
+            data-astro-cid-5blmo7yk=""
           >
             <path
-              d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"
+              d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"
+              data-astro-cid-5blmo7yk=""
             ></path>
           </svg>
         </div>
         <div class="nav__mobile-btn" role="menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="25"
-            height="25"
-            viewBox="0 0 50 50"
-            fill="#f5f5f5"
+            aria-hidden="true"
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="currentColor"
           >
             <path
-              d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+              fill="#ffffff"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+              fill="#ffffff"
             ></path>
           </svg>
         </div>
       </nav>
     </header>
     <main>
-      <section aria-labelledby="homeTitle" id="homeSection">
+      <section aria-labelledby="titleSection1" id="section1">
         <div class="wrapper-contents home flex-between-center gap-4">
-          <article class="grid gap-2">
-            <h1 id="homeTitle">Home Websites Title</h1>
+          <article class="home__article grid gap-2">
+            <h1 id="titleSection1">Home Websites Title</h1>
             <p>
               Reprehenderit consequat tempor nostrud aute consectetur enim amet.
               <br />
@@ -69,7 +109,7 @@
             </p>
             <a class="btn" href="#">Explore the magic</a>
           </article>
-          <figure class="home__img">
+          <figure>
             <img
               src="image-coming-soon.webp"
               alt="image"
@@ -77,98 +117,33 @@
               height="500"
               loading="lazy"
               decoding="async"
-              class="img"
+              class="home__img"
             />
-            <figcaption class="text-center">
-              <small>Image Coming Soon</small>
-            </figcaption>
+            <figcaption class="text-center">Caption for image</figcaption>
           </figure>
-        </div>
-      </section>
-      <section aria-labelledby="titleSection1" id="section1">
-        <div class="wrapper-contents grid gap-4">
-          <article class="grid gap-base">
-            <h2 id="titleSection1">Section 1 Title</h2>
-            <p>
-              Velit eu adipisicing duis ad minim quis consequat ipsum anim id.
-            </p>
-          </article>
-          <div class="grid gap-4">
-            <section
-              aria-labelledby=""
-              class="flex-between-center gap-4 wrapper-article"
-            >
-              <img
-                src="image-coming-soon.webp"
-                alt="image"
-                width="500"
-                height="500"
-                loading="lazy"
-                decoding="async"
-                class="img"
-              />
-              <article class="grid gap-base">
-                <h3 id="">Content Title</h3>
-                <p>
-                  Reprehenderit consequat tempor nostrud aute consectetur enim
-                  amet. Officia sunt enim eiusmod fugiat laboris dolor
-                  exercitation non culpa fugiat. Velit eu adipisicing duis ad
-                  minim quis consequat ipsum anim id.
-                </p>
-                <a class="btn" href="#">Link here</a>
-              </article>
-            </section>
-            <section
-              aria-labelledby=""
-              class="flex-between-center gap-4 wrapper-article"
-            >
-              <img
-                src="image-coming-soon.webp"
-                alt="image"
-                width="500"
-                height="500"
-                loading="lazy"
-                decoding="async"
-                class="img"
-              />
-              <article class="grid gap-base">
-                <h3 id="">Content Title</h3>
-                <p>
-                  Reprehenderit consequat tempor nostrud aute consectetur enim
-                  amet. Officia sunt enim eiusmod fugiat laboris dolor
-                  exercitation non culpa fugiat. Velit eu adipisicing duis ad
-                  minim quis consequat ipsum anim id.
-                </p>
-                <a class="btn" href="#">Link here</a>
-              </article>
-            </section>
-          </div>
         </div>
       </section>
       <section aria-labelledby="titleSection2" id="section2">
         <div class="wrapper-contents grid gap-4">
           <article class="grid gap-base">
             <h2 id="titleSection2">Section 2 Title</h2>
-            <p>
-              Velit eu adipisicing duis ad minim quis consequat ipsum anim id.
-            </p>
           </article>
           <div class="grid gap-4">
-            <section
-              aria-labelledby=""
-              class="flex-between-center gap-4 wrapper-article"
-            >
-              <img
-                src="image-coming-soon.webp"
-                alt="image"
-                width="500"
-                height="500"
-                loading="lazy"
-                decoding="async"
-                class="img"
-              />
+            <div class="flex-between-start gap-4 wrapper-article">
+              <figure>
+                <img
+                  src="image-coming-soon.webp"
+                  alt="image"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  class="img"
+                />
+                <figcaption class="text-center">Caption for image</figcaption>
+              </figure>
               <article class="grid gap-base">
-                <h3 id="">Content Title</h3>
+                <h3>Content Title</h3>
                 <p>
                   Reprehenderit consequat tempor nostrud aute consectetur enim
                   amet. Officia sunt enim eiusmod fugiat laboris dolor
@@ -177,31 +152,7 @@
                 </p>
                 <a class="btn" href="#">Link here</a>
               </article>
-            </section>
-            <section
-              aria-labelledby=""
-              class="flex-between-center gap-4 wrapper-article"
-            >
-              <img
-                src="image-coming-soon.webp"
-                alt="image"
-                width="500"
-                height="500"
-                loading="lazy"
-                decoding="async"
-                class="img"
-              />
-              <article class="grid gap-base">
-                <h3 id="">Content Title</h3>
-                <p>
-                  Reprehenderit consequat tempor nostrud aute consectetur enim
-                  amet. Officia sunt enim eiusmod fugiat laboris dolor
-                  exercitation non culpa fugiat. Velit eu adipisicing duis ad
-                  minim quis consequat ipsum anim id.
-                </p>
-                <a class="btn" href="#">Link here</a>
-              </article>
-            </section>
+            </div>
           </div>
         </div>
       </section>
@@ -209,26 +160,23 @@
         <div class="wrapper-contents grid gap-4">
           <article class="grid gap-base">
             <h2 id="titleSection3">Section 3 Title</h2>
-            <p>
-              Velit eu adipisicing duis ad minim quis consequat ipsum anim id.
-            </p>
           </article>
           <div class="grid gap-4">
-            <section
-              aria-labelledby=""
-              class="flex-between-center gap-4 wrapper-article"
-            >
-              <img
-                src="image-coming-soon.webp"
-                alt="image"
-                width="500"
-                height="500"
-                loading="lazy"
-                decoding="async"
-                class="img"
-              />
+            <div class="flex-between-start gap-4 wrapper-article">
+              <figure>
+                <img
+                  src="image-coming-soon.webp"
+                  alt="image"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  class="img"
+                />
+                <figcaption class="text-center">Caption for image</figcaption>
+              </figure>
               <article class="grid gap-base">
-                <h3 id="">Content Title</h3>
+                <h3>Content Title</h3>
                 <p>
                   Reprehenderit consequat tempor nostrud aute consectetur enim
                   amet. Officia sunt enim eiusmod fugiat laboris dolor
@@ -237,71 +185,80 @@
                 </p>
                 <a class="btn" href="#">Link here</a>
               </article>
-            </section>
-            <section
-              aria-labelledby=""
-              class="flex-between-center gap-4 wrapper-article"
-            >
-              <img
-                src="image-coming-soon.webp"
-                alt="image"
-                width="500"
-                height="500"
-                loading="lazy"
-                decoding="async"
-                class="img"
-              />
-              <article class="grid gap-base">
-                <h3 id="">Content Title</h3>
-                <p>
-                  Reprehenderit consequat tempor nostrud aute consectetur enim
-                  amet. Officia sunt enim eiusmod fugiat laboris dolor
-                  exercitation non culpa fugiat. Velit eu adipisicing duis ad
-                  minim quis consequat ipsum anim id.
-                </p>
-                <a class="btn" href="#">Link here</a>
-              </article>
-            </section>
+            </div>
           </div>
         </div>
       </section>
       <section aria-labelledby="titleSection4" id="section4">
-        <div class="wrapper-contents grid-center gap-base">
-          <h2 id="titleSection4" class="text-center">Section 4 Title</h2>
-          <p class="text-center">
-            Don't hesitate and wait any longer. What are you waiting for?
-            <br />Don't wait for the apocalypse to arrive.
-          </p>
-          <a href="#" class="btn">Link here</a>
+        <div class="wrapper-contents grid gap-4">
+          <article class="grid gap-base">
+            <h2 id="titleSection4">Section 4 Title</h2>
+          </article>
+          <div class="grid gap-4">
+            <div class="flex-between-start gap-4 wrapper-article">
+              <figure>
+                <img
+                  src="image-coming-soon.webp"
+                  alt="image"
+                  width="500"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  class="img"
+                />
+                <figcaption class="text-center">Caption for image</figcaption>
+              </figure>
+              <article class="grid gap-base">
+                <h3>Content Title</h3>
+                <p>
+                  Reprehenderit consequat tempor nostrud aute consectetur enim
+                  amet. Officia sunt enim eiusmod fugiat laboris dolor
+                  exercitation non culpa fugiat. Velit eu adipisicing duis ad
+                  minim quis consequat ipsum anim id.
+                </p>
+                <a class="btn" href="#">Link here</a>
+              </article>
+            </div>
+          </div>
+          <div class="grid-center gap-2">
+            <p class="text-center">
+              Don't hesitate and wait any longer. What are you waiting for?
+              <br />Don't wait for the apocalypse to arrive.
+            </p>
+            <a href="#" class="btn">Link here</a>
+          </div>
         </div>
       </section>
-      <section aria-labelledby="contactTitle" id="section5">
-        <div class="wrapper-contents flex-between-start wrap gap-4">
-          <article class="contact__content flex flex-column gap-2">
-            <h2 id="contactTitle">
-              Contact Section Title <br />
+      <section aria-labelledby="titleSection5" id="section5">
+        <div class="wrapper-contents contact flex-between-start wrap gap-4">
+          <article class="contact__content grid gap-2">
+            <h2 id="titleSection5">
               Have an idea ? <br />
               Let’s talk about it.
             </h2>
             <a href="#" class="link">wireframe.dev@email.com</a>
             <address>
-              3 Way, 99th Street, Somewhere, USB <br />
-              123-456-7890 <br />
-              bye@wireframe.dev
+              88th Street, Somewhere in Earth,
+              <br />
+              Asia, 484848.
+              <br />
+              &#x260E; 123-456-7890
             </address>
-            <br />
-            <ul class="contact__media flex-between-center wrap gap-2">
-              <li><a href="#" class="contact__link">Linkedin</a></li>
-              <li><a href="#" class="contact__link">Twitter</a></li>
-              <li><a href="#" class="contact__link">Instagram</a></li>
-              <li><a href="#" class="contact__link">Dribbble</a></li>
-              <li><a href="#" class="contact__link">Github</a></li>
-              <li><a href="#" class="contact__link">Youtube</a></li>
-            </ul>
+            <div class="grid gap-base">
+              <h3 class="h4">My Social Links</h3>
+              <ul class="contact__media flex-between-center wrap gap-2">
+                <li><a href="#" class="link">Linkedin</a></li>
+                <li><a href="#" class="link">Twitter</a></li>
+                <li><a href="#" class="link">Facebook</a></li>
+                <li><a href="#" class="link">Instagram</a></li>
+                <li><a href="#" class="link">Pinterest</a></li>
+                <li><a href="#" class="link">Youtube</a></li>
+              </ul>
+            </div>
           </article>
           <form action="#" class="contact__form">
             <fieldset>
-              <legend class="h3">GET IN TOUCH WITH US</legend>
+              <legend class="h3">Get In Touch</legend>
               <div class="form-group">
                 <label for="name">Your name</label>
                 <input
@@ -343,8 +300,11 @@
     </main>
     <footer>
       <div class="wrapper-contents footer flex-between-center wrap gap-1">
-        <a href="/" class="nav__logo" title="Back to Home">Wireframe</a>
-        <p>2025 - Present | Made by : Miko</p>
+        <a href="/" class="logo" title="Back to Home">Wireframe</a>
+        <p>
+          &copy; <span id="copyright"></span> | All rights reserved | Made by :
+          Miko
+        </p>
       </div>
     </footer>
     <script src="script.js"></script>
