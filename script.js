@@ -37,3 +37,7 @@ themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem("darkmode");
   darkmode !== "active" ? enableDarkmode() : disableDarkmode();
 });
+
+// Footer
+const copyright = document.querySelector("#copyright");
+copyright.textContent = new Date().getFullYear().toString();
