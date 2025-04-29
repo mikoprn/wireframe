@@ -32,14 +32,18 @@
     --size-base: 1rem;
     --size-1-xl: 1.125rem;
     --size-2-base: 1.25rem;
-    --size-2-xl: 1.5rem;
+    --size-2-l: 1.5rem;
+    --size-2-xl: 1.75rem;
     --size-3-base: 1.875rem;
     --size-3-xl: 2.25rem;
     --size-4-base: 2.5rem;
     --size-4-xl: 3rem;
     --size-5-base: 3.125rem;
+    --size-5-xl: 3.5rem;
     --size-6-base: 3.75rem;
+    --size-6-xl: 4rem;
     --size-7-base: 4.375rem;
+    --size-7-xl: 4.5rem;
     --size-8-base: 5rem;
     --text-size: 1.125rem;
 
@@ -52,14 +56,20 @@
     --clamp-base: clamp(0.938rem, 2vw, 1rem);
     --clamp-1-xl: clamp(1rem, 2vw, 1.125rem);
     --clamp-2-base: clamp(1.125rem, 2vw, 1.25rem);
-    --clamp-2-xl: clamp(1.25rem, 2.4vw, 1.5rem);
-    --clamp-3-base: clamp(1.375rem, 3vw, 1.875rem);
-    --clamp-3-xl: clamp(1.5rem, 3.2vw, 2rem);
+    --clamp-2-l: clamp(1.25rem, 2.4vw, 1.5rem);
+    --clamp-2-xl: clamp(1.5rem, 2.8vw, 1.75rem);
+    --clamp-3-base: clamp(1.625rem, 3vw, 1.875rem);
+    --clamp-3-xl: clamp(1.75rem, 3.2vw, 2rem);
     --clamp-4-base: clamp(2rem, 4vw, 2.5rem);
     --clamp-4-xl: clamp(2.5rem, 4.8vw, 3rem);
-    --clamp-5-base: clamp(2.25rem, 5vw, 3.125rem);
-    --clamp-7-base: clamp(3.125rem, 7vw, 4.375rem);
-    --clamp-7-xl: clamp(3.5rem, 7.2vw, 4.5rem);
+    --clamp-5-base: clamp(2.625rem, 5vw, 3.125rem);
+    --clamp-5-xl: clamp(3rem, 5.6vw, 3.5rem);
+    --clamp-6-base: clamp(3.5rem, 6vw, 3.75rem);
+    --clamp-6-xl: clamp(3.75rem, 6.4vw, 4rem);
+    --clamp-7-base: clamp(4rem, 7vw, 4.375rem);
+    --clamp-7-xl: clamp(4.25rem, 7.2vw, 4.5rem);
+    --clamp-navbar: clamp(3.5rem, 7.2vw, 4.5rem);
+
 
     /*Font Weight*/
     --fw-thin: 100;
@@ -82,7 +92,7 @@
     text-decoration: none;
     list-style: none;
     line-height: 1.6;
-    font-family: 'general-sans', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
         'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
@@ -99,7 +109,8 @@ body {
     background-color: var(--light-accent);
 }
 
-.darkmode {
+.darkmode,
+.darkmode .header {
     background-color: var(--dark-mode);
     color: var(--light-base);
 }
@@ -121,34 +132,49 @@ body {
 h1,
 .h1 {
     font-size: var(--clamp-4-base);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     line-height: 1.2;
 }
 
 h2,
 .h2 {
     font-size: var(--clamp-3-xl);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     line-height: 1.2;
+    text-decoration: underline 2px;
+    text-underline-offset: var(--size-small-base);
 }
 
 h3,
 .h3 {
     font-size: var(--clamp-2-xl);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     line-height: 1.2;
 }
 
 h4,
 .h4 {
+    font-size: var(--clamp-2-l);
+    font-weight: var(--fw-medium);
+    line-height: 1.2;
+}
+
+h5,
+.h5 {
     font-size: var(--clamp-2-base);
+    font-weight: var(--fw-regular);
+    line-height: 1.2;
+}
+
+h6,
+.h6 {
+    font-size: var(--clamp-1-xl);
     font-weight: var(--fw-regular);
     line-height: 1.2;
 }
 
 p,
 .p,
-figcaption,
 address {
     font-size: var(--text-size);
     font-weight: var(--fw-light);
@@ -188,12 +214,9 @@ button,
     transition: var(--transition);
 }
 
-a:hover,
-a:focus-visible,
-button:hover,
-button:focus-visible,
-.btn:hover,
-.btn:focus-visible {
+a:is(:hover, :focus-visible),
+button:is(:hover, :focus-visible),
+.btn:is(:hover, :focus-visible) {
     opacity: var(--opacity);
 }
 
@@ -221,8 +244,8 @@ button,
 
 /* Form  */
 .contact__form {
-    flex: 1;
-    max-width: 500px;
+    max-width: 31.25rem;
+    width: 100%;
     padding: 1.5em;
     border-radius: .5em;
     border: var(--border);
@@ -271,7 +294,7 @@ textarea:focus-visible:not(:placeholder-shown):invalid {
 
 .form-group input:focus-visible:invalid,
 textarea:focus-visible:invalid {
-    outline-color: var(--warning);
+    outline-color: inherit;
 }
 
 .contact__btn {
@@ -281,6 +304,16 @@ textarea:focus-visible:invalid {
 /* Utility  */
 .flex {
     display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-between-start {
@@ -295,6 +328,12 @@ textarea:focus-visible:invalid {
     align-items: center;
 }
 
+.flex-evenly-start {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start
+}
+
 .flex-evenly-center {
     display: flex;
     justify-content: space-evenly;
@@ -307,8 +346,10 @@ textarea:focus-visible:invalid {
     align-items: center;
 }
 
-.wrap {
-    flex-wrap: wrap;
+.flex-around-start {
+    display: flex;
+    justify-content: space-around;
+    align-items: start
 }
 
 .flex-row {
@@ -371,6 +412,10 @@ textarea:focus-visible:invalid {
     text-align: center;
 }
 
+.text-large {
+    font-size: var(--clamp-5-base);
+}
+
 .text-gradient {
     background-image: var(--gradient);
     background-clip: text;
@@ -404,6 +449,30 @@ textarea:focus-visible:invalid {
     }
 }
 
+.wrapper-article figure img {
+    width: clamp(16.875rem, 40vw, 31.25rem);
+    object-fit: contain;
+}
+
+.wrapper-article figure figcaption {
+    margin-top: var(--size-small-base);
+}
+
+.wrapper-article article {
+    flex: 1;
+}
+
+/* Logo  */
+.logo {
+    font-size: var(--text-size);
+    font-weight: var(--fw-medium);
+}
+
+.logo img {
+    width: var(--clamp-1-xl);
+    height: var(--clamp-1-xl);
+}
+
 /* Header & Navigation Section */
 .header {
     width: 100%;
@@ -415,21 +484,11 @@ textarea:focus-visible:invalid {
 }
 
 .nav {
-    height: var(--clamp-7-xl);
+    height: var(--clamp-navbar);
     padding-block: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav__logo {
-    font-size: var(--text-size);
-    font-weight: var(--fw-medium);
-}
-
-.nav__logo img {
-    width: var(--clamp-1-xl);
-    height: var(--clamp-1-xl);
 }
 
 .nav__menu {
@@ -470,33 +529,75 @@ main,
     animation: var(--transitionPrimary);
 }
 
-.img {
-    width: clamp(16.875rem, 12.5rem + 25vw, 31.25rem);
+/* Section 1*/
+.home__article {
+    flex: 1;
+}
+
+.home__img {
+    width: clamp(16.875rem, 40vw, 31.25rem);
+}
+
+.home figure figcaption {
+    margin-top: var(--size-small-base);
 }
 
 /* Contact Section */
+.contact h2 {
+    text-decoration: none;
+}
+
+address {
+    margin-bottom: var(--clamp-2-base);
+}
+
 .contact__media {
-    max-width: 17rem;
+    max-width: 21.875rem;
     width: 100%;
 }
 
-.contact__link {
-    font-size: var(--text-size);
-    font-weight: var(--fw-light);
+.contact__media .link {
+    font-weight: var(--fw-regular);
 }
 
 /* Footer Section */
 .footer {
-    padding-block: 1em;
+    padding-block: 0.5em;
     border-top: var(--border);
 }
 
-.footer p {
+.footer p,
+.footer a {
     font-size: var(--clamp-1-xl);
 }
 
-/* Tablet 700px  */
+/* 768px */
+@media (max-width: 48em) {
+    .contact {
+        justify-content: center;
+    }
+
+    .contact__content {
+        text-align: center;
+    }
+}
+
+/* 700px */
 @media (max-width: 43.75em) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: center;
+    }
+
+    button,
+    .btn {
+        margin-inline: auto;
+    }
+
     #themeSwitch {
         margin-inline: auto 1em;
     }
@@ -508,10 +609,20 @@ main,
         border-radius: var(--size-xx-small);
     }
 
+    .nav__mobile-btn svg:first-child {
+        display: block;
+        fill: white;
+    }
+
+    .nav__mobile-btn svg:last-child {
+        display: none;
+        fill: white;
+    }
+
     .nav__menu {
         position: fixed;
         width: 75%;
-        top: var(--clamp-7-xl);
+        top: var(--clamp-navbar);
         right: 0;
         padding-top: var(--size-5-base);
         flex-direction: column;
@@ -525,6 +636,14 @@ main,
 
     .nav__menu.active {
         transform: translateX(0%);
+    }
+
+    .nav__menu.active~.nav__mobile-btn svg:first-child {
+        display: none;
+    }
+
+    .nav__menu.active~.nav__mobile-btn svg:last-child {
+        display: block;
     }
 
     .nav__menu li {
@@ -545,32 +664,21 @@ main,
     .footer {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+
+    .home__img,
+    .wrapper-article figure img {
+        width: 100%;
+    }
+
+    .footer {
+        text-align: center;
     }
 }
 
 /* Mobile 600px  */
 @media (max-width: 37.5em) {
-
-    h1,
-    h2,
-    h3 {
-        text-align: center;
-    }
-
-    .img {
-        width: 100%;
-    }
-
-    .contact__content {
-        text-align: center;
-        margin-inline: auto;
-    }
-
-    .contact__media,
-    .contact__form {
-        margin-inline: auto;
-    }
-
     .contact__form {
         padding-inline: 1em;
 
