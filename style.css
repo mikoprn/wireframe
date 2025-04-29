@@ -181,6 +181,10 @@ address {
     font-style: normal;
 }
 
+figcaption {
+    font-weight: var(--fw-light);
+}
+
 b,
 strong {
     font-size: var(--text-size);
@@ -208,7 +212,7 @@ a,
 button,
 .btn {
     font-size: var(--text-size);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     line-height: normal;
     color: inherit;
     transition: var(--transition);
@@ -223,6 +227,7 @@ button:is(:hover, :focus-visible),
 button,
 .btn {
     font-size: var(--size-base);
+    font-weight: var(--fw-medium);
     width: fit-content;
     color: var(--dark-base);
     background-color: var(--gray-200);
@@ -554,6 +559,7 @@ address {
 .contact__media {
     max-width: 21.875rem;
     width: 100%;
+    row-gap: var(--size-small-base);
 }
 
 .contact__media .link {
@@ -584,6 +590,7 @@ address {
 
 /* 700px */
 @media (max-width: 43.75em) {
+
     h1,
     h2,
     h3,
@@ -681,6 +688,5 @@ address {
 @media (max-width: 37.5em) {
     .contact__form {
         padding-inline: 1em;
-
     }
 }
