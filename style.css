@@ -14,6 +14,7 @@
     --purple-600: #7c3aed;
     --accent-color-1: #7f00ff;
     --accent-color-2: #e100ff;
+    --link-color: #00aaff;
     --gradient: linear-gradient(116deg, #7f00ff,
             #e100ff);
     --opacity: .8;
@@ -45,31 +46,35 @@
     --size-7-base: 4.375rem;
     --size-7-xl: 4.5rem;
     --size-8-base: 5rem;
-    --text-size: 1.125rem;
 
     /*Clamp*/
-    --clamp-x-small: clamp(0.188rem, 1vw, 0.313rem);
-    --clamp-small-l: clamp(0.5rem, 1vw, 0.625rem);
-    --clamp-small-xl: clamp(0.625rem, 1vw, 0.75rem);
-    --clamp-base-xs: clamp(0.75rem, 1vw, 0.875rem);
-    --clamp-base-sm: clamp(0.875rem, 1vw, 0.938rem);
-    --clamp-base: clamp(0.938rem, 2vw, 1rem);
-    --clamp-1-xl: clamp(1rem, 2vw, 1.125rem);
-    --clamp-2-base: clamp(1.125rem, 2vw, 1.25rem);
-    --clamp-2-l: clamp(1.25rem, 2.4vw, 1.5rem);
-    --clamp-2-xl: clamp(1.5rem, 2.8vw, 1.75rem);
-    --clamp-3-base: clamp(1.625rem, 3vw, 1.875rem);
-    --clamp-3-xl: clamp(1.75rem, 3.2vw, 2rem);
-    --clamp-4-base: clamp(2rem, 4vw, 2.5rem);
-    --clamp-4-xl: clamp(2.5rem, 4.8vw, 3rem);
-    --clamp-5-base: clamp(2.625rem, 5vw, 3.125rem);
-    --clamp-5-xl: clamp(3rem, 5.6vw, 3.5rem);
-    --clamp-6-base: clamp(3.5rem, 6vw, 3.75rem);
-    --clamp-6-xl: clamp(3.75rem, 6.4vw, 4rem);
-    --clamp-7-base: clamp(4rem, 7vw, 4.375rem);
-    --clamp-7-xl: clamp(4.25rem, 7.2vw, 4.5rem);
-    --clamp-navbar: clamp(3.5rem, 7.2vw, 4.5rem);
+    --clamp-x-small: clamp(0.188rem, 0.152rem + 0.179vw, 0.313rem);
+    --clamp-small-base: clamp(0.313rem, 0.259rem + 0.268vw, 0.5rem);
+    --clamp-small-l: clamp(0.5rem, 0.464rem + 0.179vw, 0.625rem);
+    --clamp-small-xl: clamp(0.625rem, 0.589rem + 0.179vw, 0.75rem);
+    --clamp-base-xs: clamp(0.75rem, 0.714rem + 0.179vw, 0.875rem);
+    --clamp-base-sm: clamp(0.875rem, 0.857rem + 0.089vw, 0.938rem);
+    --clamp-base: clamp(0.938rem, 0.92rem + 0.089vw, 1rem);
+    --clamp-1-xl: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+    --clamp-2-base: clamp(1.125rem, 1.089rem + 0.179vw, 1.25rem);
+    --clamp-2-l: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+    --clamp-2-xl: clamp(1.5rem, 1.429rem + 0.357vw, 1.75rem);
+    --clamp-3-base: clamp(1.625rem, 1.554rem + 0.357vw, 1.875rem);
+    --clamp-3-xl: clamp(2rem, 1.929rem + 0.357vw, 2.25rem);
+    --clamp-4-base: clamp(2.25rem, 2.179rem + 0.357vw, 2.5rem);
+    --clamp-4-xl: clamp(2.5rem, 2.357rem + 0.714vw, 3rem);
+    --clamp-5-base: clamp(2.625rem, 2.482rem + 0.714vw, 3.125rem);
+    --clamp-5-xl: clamp(3rem, 2.857rem + 0.714vw, 3.5rem);
+    --clamp-6-base: clamp(3.25rem, 3.107rem + 0.714vw, 3.75rem);
+    --clamp-6-xl: clamp(3.5rem, 3.357rem + 0.714vw, 4rem);
+    --clamp-7-base: clamp(3.875rem, 3.732rem + 0.714vw, 4.375rem);
+    --clamp-7-xl: clamp(4rem, 3.857rem + 0.714vw, 4.5rem);
+    --clamp-navbar: clamp(3.5rem, 3.25rem + 1.25vw, 4.375rem);
 
+    /* Font Sizing  */
+    --fz-base: 1rem;
+    --fz-large: 1.125rem;
+    --fz-clamp-large: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
 
     /*Font Weight*/
     --fw-thin: 100;
@@ -92,7 +97,7 @@
     text-decoration: none;
     list-style: none;
     line-height: 1.6;
-    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
+    font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
         'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
@@ -113,11 +118,6 @@ body {
 .darkmode .header {
     background-color: var(--dark-mode);
     color: var(--light-base);
-}
-
-.darkmode .btn-secondary {
-    color: var(--light-base);
-    background-color: var(--dark-mode);
 }
 
 .darkmode .services__item,
@@ -141,8 +141,6 @@ h2,
     font-size: var(--clamp-3-xl);
     font-weight: var(--fw-medium);
     line-height: 1.2;
-    text-decoration: underline 2px;
-    text-underline-offset: var(--size-small-base);
 }
 
 h3,
@@ -162,39 +160,38 @@ h4,
 h5,
 .h5 {
     font-size: var(--clamp-2-base);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     line-height: 1.2;
 }
 
 h6,
 .h6 {
     font-size: var(--clamp-1-xl);
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     line-height: 1.2;
 }
 
 p,
 .p,
-address {
-    font-size: var(--text-size);
-    font-weight: var(--fw-light);
+address,
+figcaption,
+input,
+textarea {
+    font-size: var(--fz-clamp-large);
+    font-weight: var(--fw-regular);
     font-style: normal;
 }
 
-figcaption {
-    font-weight: var(--fw-light);
-}
-
 b,
-strong {
-    font-size: var(--text-size);
+strong,
+.text-bold {
+    font-size: inherit;
     font-weight: var(--fw-medium);
 }
 
 small,
 .text-small {
-    font-size: var(--size-base);
-    font-weight: var(--fw-light);
+    font-size: var(--size-base-xs);
 }
 
 img,
@@ -211,11 +208,11 @@ video {
 a,
 button,
 .btn {
-    font-size: var(--text-size);
-    font-weight: var(--fw-medium);
+    font-size: inherit;
     line-height: normal;
     color: inherit;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 a:is(:hover, :focus-visible),
@@ -234,12 +231,16 @@ button,
     border: none;
     padding: .5em 1.25em;
     border-radius: var(--size-x-small);
-    cursor: pointer;
 }
 
 .btn-primary {
     color: var(--light-base);
     background-color: var(--blue-600);
+}
+
+.btn-secondary {
+    color: var(--dark-mode);
+    background-color: var(--light-base);
 }
 
 .btn-gradient {
@@ -272,14 +273,14 @@ button,
 }
 
 .form-group label {
-    font-size: var(--size-base);
-    font-weight: var(--fw-light);
+    font-size: var(--size-base-xs);
+    font-weight: var(--fw-regular);
 }
 
 .form-group input,
 textarea {
-    font-size: var(--text-size);
-    font-weight: var(--fw-light);
+    font-size: inherit;
+    font-weight: var(--fw-regular);
     color: inherit;
     background-color: transparent;
     border: none;
@@ -469,7 +470,7 @@ textarea:focus-visible:invalid {
 
 /* Logo  */
 .logo {
-    font-size: var(--text-size);
+    font-size: var(--clamp-2-base);
     font-weight: var(--fw-medium);
 }
 
@@ -504,8 +505,7 @@ textarea:focus-visible:invalid {
 }
 
 .nav__link {
-    font-weight: var(--fw-light);
-    transition: var(--transition);
+    font-size: var(--clamp-1-xl);
 }
 
 .nav__link:is(:hover, :focus-visible) {
@@ -530,7 +530,7 @@ textarea:focus-visible:invalid {
 
 main,
 .main {
-    margin-top: var(--clamp-7-xl);
+    margin-top: var(--clamp-navbar);
     animation: var(--transitionPrimary);
 }
 
@@ -556,24 +556,29 @@ address {
     margin-bottom: var(--clamp-2-base);
 }
 
+.contact__email {
+    font-size: var(--clamp-2-base);
+}
+
 .contact__media {
-    max-width: 21.875rem;
+    max-width: 18.75rem;
     width: 100%;
     row-gap: var(--size-small-base);
 }
 
 .contact__media .link {
-    font-weight: var(--fw-regular);
+    font-size: var(--clamp-1-xl);
+    font-weight: inherit;
+    color: inherit;
 }
 
 /* Footer Section */
 .footer {
-    padding-block: 0.5em;
+    padding-block: 1em;
     border-top: var(--border);
 }
 
-.footer p,
-.footer a {
+.footer p {
     font-size: var(--clamp-1-xl);
 }
 
@@ -585,6 +590,10 @@ address {
 
     .contact__content {
         text-align: center;
+    }
+
+    .contact__media {
+        margin-inline: auto;
     }
 }
 
@@ -601,7 +610,8 @@ address {
     }
 
     button,
-    .btn {
+    .btn,
+    .btn-group {
         margin-inline: auto;
     }
 
@@ -618,12 +628,10 @@ address {
 
     .nav__mobile-btn svg:first-child {
         display: block;
-        fill: white;
     }
 
     .nav__mobile-btn svg:last-child {
         display: none;
-        fill: white;
     }
 
     .nav__menu {
@@ -659,7 +667,7 @@ address {
 
     .nav__link {
         display: block;
-        font-size: var(--text-size);
+        font-size: var(--size-1-xl);
         font-weight: var(--fw-medium);
         color: var(--light-base);
         padding-block: 1em;
