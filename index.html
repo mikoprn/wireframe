@@ -30,7 +30,7 @@
     <meta name="robots" content="index, follow" />
     <!-- Fonts -->
     <link
-      href="https://api.fontshare.com/v2/css?f[]=montserrat@100,200,300,400,500,600,700,800&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=montserrat@100,200,300,400,500,600,700,800&amp;display=swap"
       rel="stylesheet"
     />
     <!-- Styles -->
@@ -107,7 +107,10 @@
               culpa fugiat. <br />Velit eu adipisicing duis ad minim quis
               consequat ipsum anim id.
             </p>
-            <a class="btn" href="#">Explore the magic</a>
+            <div class="btn-group flex gap-2">
+              <a class="btn btn-primary" href="#">Link Primary</a>
+              <a class="btn" href="#">Link Secondary</a>
+            </div>
           </article>
           <figure>
             <img
@@ -150,7 +153,10 @@
                   exercitation non culpa fugiat. Velit eu adipisicing duis ad
                   minim quis consequat ipsum anim id.
                 </p>
-                <a class="btn" href="#">Link here</a>
+                <div class="btn-group flex gap-2">
+                  <a class="btn btn-primary" href="#">Link 1</a>
+                  <a class="btn" href="#">Link 2</a>
+                </div>
               </article>
             </div>
           </div>
@@ -183,7 +189,10 @@
                   exercitation non culpa fugiat. Velit eu adipisicing duis ad
                   minim quis consequat ipsum anim id.
                 </p>
-                <a class="btn" href="#">Link here</a>
+                <div class="btn-group flex gap-2">
+                  <a class="btn btn-primary" href="#">Link 1</a>
+                  <a class="btn" href="#">Link 2</a>
+                </div>
               </article>
             </div>
           </div>
@@ -216,16 +225,20 @@
                   exercitation non culpa fugiat. Velit eu adipisicing duis ad
                   minim quis consequat ipsum anim id.
                 </p>
-                <a class="btn" href="#">Link here</a>
+                <div class="btn-group flex gap-2">
+                  <a class="btn btn-primary" href="#">Link 1</a>
+                  <a class="btn" href="#">Link 2</a>
+                </div>
               </article>
             </div>
           </div>
           <div class="grid-center gap-2">
             <p class="text-center">
+              Don't wait for the apocalypse to arrive.
+              <br />
               Don't hesitate and wait any longer. What are you waiting for?
-              <br />Don't wait for the apocalypse to arrive.
             </p>
-            <a href="#" class="btn">Link here</a>
+            <a href="#" class="btn btn-primary">Link Primary</a>
           </div>
         </div>
       </section>
@@ -236,13 +249,15 @@
               Have an idea ? <br />
               Let’s talk about it.
             </h2>
-            <a href="mailto:#" class="link">wireframe.dev@email.com</a>
+            <a href="mailto:#" class="link contact__email"
+              >wireframe.dev@email.com</a
+            >
             <address>
               88th Street, Somewhere in Earth, 484848.
               <br />
               &#x260E; 123-456-7890
             </address>
-            <div class="grid gap-base">
+            <div class="contact__social grid gap-base">
               <h3 class="h4">My Social Links</h3>
               <ul class="contact__media flex-between-center wrap gap-2">
                 <li><a href="#" class="link">Linkedin</a></li>
@@ -278,7 +293,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="email">Your message</label>
+                <label for="message">Your message</label>
                 <textarea
                   name="message"
                   id="message"
@@ -288,9 +303,7 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="contact__btn">
-                SEND IT
-              </button>
+              <button type="submit" class="contact__btn btn-primary">SEND IT</button>
             </fieldset>
           </form>
         </div>
