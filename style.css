@@ -9,17 +9,14 @@
     --warning: #ffff00;
     --danger: #ff0000;
     --gray-200: #e5e7eb;
-    --blue-600: #2563eb;
     --indigo-600: #4f46e5;
     --purple-600: #7c3aed;
-    --accent-color-1: #7f00ff;
-    --accent-color-2: #e100ff;
-    --link-color: #00aaff;
-    --gradient: linear-gradient(116deg, #7f00ff,
-            #e100ff);
+    --accent-color-1: #2563eb;
+    --accent-color-2: #00aaff;
+    --gradient: linear-gradient(116deg, var(--accent-color-1), var(--accent-color-2));
     --opacity: .8;
     --transition: all 300ms ease-in-out;
-    --transitionPrimary: transitionPrimary 500ms ease-in-out forwards;
+    --animationPrimary: animationPrimary 500ms ease-in-out forwards;
     --border: 1px solid;
 
     /*Size*/
@@ -235,12 +232,12 @@ button,
 
 .btn-primary {
     color: var(--light-base);
-    background-color: var(--blue-600);
+    background-color: var(--accent-color-1);
 }
 
 .btn-secondary {
     color: var(--dark-mode);
-    background-color: var(--light-base);
+    background-color: var(--accent-color-2);
 }
 
 .btn-gradient {
@@ -430,6 +427,7 @@ textarea:focus-visible:invalid {
 }
 
 .link {
+    color: var(--accent-color-1);
     font-weight: var(--fw-medium);
 }
 
@@ -439,11 +437,11 @@ textarea:focus-visible:invalid {
     padding-block: min(12%, 3rem);
 }
 
-.transitionPrimary {
-    animation: transitionPrimary 500ms ease-in-out forwards;
+.animationPrimary {
+    animation: animationPrimary 500ms ease-in-out forwards;
 }
 
-@keyframes transitionPrimary {
+@keyframes animationPrimary {
     from {
         opacity: 0;
         transform: rotateX(-10deg);
@@ -525,7 +523,7 @@ textarea:focus-visible:invalid {
 main,
 .main {
     margin-top: var(--clamp-navbar);
-    animation: var(--transitionPrimary);
+    animation: var(--animationPrimary);
 }
 
 /* Section 1*/
