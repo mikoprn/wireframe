@@ -514,12 +514,6 @@ textarea:focus-visible:invalid {
 }
 
 #themeSwitch {
-    padding: 0;
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -624,6 +618,10 @@ address {
         background-image: var(--gradient);
         padding: var(--size-xx-small);
         border-radius: var(--size-xx-small);
+        width: var(--size-3-xl);
+        height: var(--size-3-xl);
+        display: grid;
+        place-items: center;
     }
 
     .nav__mobile-btn svg:first-child {
@@ -636,7 +634,7 @@ address {
 
     .nav__menu {
         position: fixed;
-        width: 75%;
+        width: 80%;
         top: var(--clamp-navbar);
         right: 0;
         padding-top: var(--size-5-base);
