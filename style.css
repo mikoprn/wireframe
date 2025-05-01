@@ -126,6 +126,10 @@ body {
     color: var(--dark-base);
 }
 
+.darkmode .link {
+    color: var(--accent-color-2);
+}
+
 h1,
 .h1 {
     font-size: var(--clamp-4-base);
